@@ -2,3 +2,10 @@ theme: jekyll-theme-midnight
 
 plugins:
   - jekyll-seo-tag
+
+webmaster_verifications:
+  google: dlWVINEIhxwWporGaGSp7SMkY9hrbR9tty8aXvcP5ck
+  bing: 1234
+  alexa: 1234
+  yandex: 1234
+  baidu: 1234
