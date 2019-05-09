@@ -4,7 +4,7 @@ plugins:
   - jekyll-seo-tag
 
 webmaster_verifications:
-  google: google-site-verification=dlWVINEIhxwWporGaGSp7SMkY9hrbR9tty8aXvcP5ck
+  google: uGDkT9PwZFzSUIVtB2FkqyeU_gqWasx9JvuU2ZyPCpc
   bing: 1234
   alexa: 1234
   yandex: 1234
