@@ -1,3 +1,3 @@
 <?php
 
-echo "Random value is " . (rand() % 50000) + 10;
+echo "Random value is " . rand(10, 50000);
