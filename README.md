@@ -39,7 +39,7 @@ Feel free to connect with me:
 
 - **Email**: [nalbe666@gmail.com (however it is real)](mailto:nalbe666@gmail.com)
 - **LinkedIn**: [jan-denisov (fake resume)](www.linkedin.com/in/jan-denisov)
-- **Twitter**: [666nalbe (banned forever)]([https://twitter.com/yourhandle](https://x.com/666nalbe))
+- **Twitter**: [666nalbe (banned forever)](https://x.com/666nalbe)
 
 Thank you for visiting! Stay tuned for more updates and projects.
 
