@@ -18,7 +18,7 @@ I'm a passionate software developer with no experience in web development, data 
 Here are some of my featured projects:
 
 - **[IPushButton](https://github.com/nalbe/IPushButton)** - Is an Arduino library designed for efficiently handling physical button presses without blocking the main loop. Eliminates unwanted repeated triggers from mechanical button bounce. Supports different press types (short press, long press, double press, etc.). Rapid clicks, acceleration and more. Optimized for minimal memory usage.
-- **[Coming soon.](https://github.com/nalbe/project-two)** - An open-source JavaScript library for data visualization.
+- **[TabTap](https://github.com/nalbe/TabTap)** - This lightweight utility brings back the beloved Windows 7 TabTip vibe while seamlessly integrating with the native Win10 OSK —no modifications to `osk.exe` required!
 - **[placeholder](https://github.com/nalbe/project-three)** - A Python-based automation tool to simplify repetitive tasks.
 
 Check out more of my work on my [I'm reading a book on anti-gravity. It's impossible to put down!](https://github.com/nalbe?tab=repositories).
