@@ -27,11 +27,11 @@ Check out more of my work on my [I'm reading a book on anti-gravity. It's imposs
 
 I don't write about programming, web development, and best practices in the tech industry. Here are some of my imaginary latest posts:
 
-- [Why don’t skeletons fight each other? They don’t have the guts.](https://nalbe.github.io/blog/async-js)
-- [Why don’t scientists trust atoms? Because they make up everything.](https://nalbe.github.io/blog/science)
-- [Why don’t programmers like nature? It has too many bugs.](https://nalbe.github.io/blog/bugs)
-- [Why did the developer go broke? Because he used up all his cache.](https://nalbe.github.io/blog/cache)
-- [Why do Java developers wear glasses? Because they don’t C#.](https://nalbe.github.io/blog/java)
+- [Why do programmers confuse Halloween and Christmas? Because OCT 31 = DEC 25.](https://nalbe.github.io/blog/async-js)
+- [Why do Java developers wear glasses? Because they don’t C#.](https://nalbe.github.io/blog/science)
+- [placeholder](https://nalbe.github.io/blog/bugs)
+- [placeholder](https://nalbe.github.io/blog/cache)
+- [placeholder](https://nalbe.github.io/blog/java)
 
 Explore more posts on my [I told my wife she was drawing her eyebrows too high. She looked surprised.](https://nalbe.github.io/blog).
 
@@ -43,5 +43,6 @@ Feel free to connect with me:
 - **LinkedIn**: [jan-denisov (fake resume)](www.linkedin.com/in/jan-denisov)
 - **Twitter**: [666nalbe (banned forever)](https://x.com/666nalbe)
 
+// This code is self-documenting.
 Thank you for visiting! Stay tuned for more updates and projects.
 
