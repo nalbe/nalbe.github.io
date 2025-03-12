@@ -1,76 +1,62 @@
 <!DOCTYPE html>
 <html>
-  
-<script>
-  let currentOverlay = null;
-function toggleGif() {
-  const gif = document.getElementById('expandingGif');
-  
-  if (!gif.classList.contains('expanded')) {
-    // Create overlay
-    currentOverlay = document.createElement('div');
-    currentOverlay.className = 'overlay';
-    document.body.appendChild(currentOverlay);
-    currentOverlay.style.display = 'block';
-    
-    // Expand GIF
-    gif.classList.add('expanded');
-    
-    // Close on overlay click
-    currentOverlay.onclick = () => {
-      gif.classList.remove('expanded');
-      document.body.removeChild(currentOverlay);
-      currentOverlay = null;
-    };
-  } else {
-    gif.classList.remove('expanded');
-    if (currentOverlay) {
-      document.body.removeChild(currentOverlay);
-      currentOverlay = null;
-    }
-  }
-}
-</script>
-  
-  <body>
-  <h1>Welcome to My Site</h1>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <div id="content"></div>
-    
-  <script>
-    // Fetch and render README.md
-    fetch('README.md')
-      .then(response => response.text())
-      .then(text => {
-        // Convert Markdown to HTML (using browser's built-in parser)
-        const html = marked.parse(text); // Requires marked.js library
-        document.getElementById('content').innerHTML = html;
-      });
-  </script>
-    
   <head>  
-    <link rel="stylesheet" href="/assets/css/demo.css">
-  </head> <!-- Demo GIF Section -->
-<section class="demo-section">
-  <div class="container">
-    <h2 class="section-title">App Demo in Action</h2>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <h1>Welcome to My Site</h1>
+    <div id="content"></div>
+    <script>
+      // Fetch and render README.md
+      fetch('README.md')
+        .then(response => response.text())
+        .then(text => {
+          // Convert Markdown to HTML (using browser's built-in parser)
+          const html = marked.parse(text); // Requires marked.js library
+          document.getElementById('content').innerHTML = html;
+        });
+    </script>
+    <section class="demo-section">
+      <h2 class="section-title">App Demo in Action</h2>
+      <img 
+        src="/assets/img/TabTap_demo.gif" 
+        alt="Application demo animation" 
+        class="demo-gif"
+        id="expandingGif"
+        onclick="toggleGif()"
+      />
+    </section>
+    <script>
+      let currentOverlay = null;
+
+      function toggleGif() {
+        const gif = document.getElementById('expandingGif');
     
-    <div class="gif-wrapper">
-  <img 
-    src="/assets/img/TabTap_demo.gif" 
-    alt="Application demo animation" 
-    class="demo-gif"
-    id="expandingGif"
-    onclick="toggleGif()"
-  >
-  <p class="gif-caption">
-    <span class="Watch our feature workflow click-here"></span>
-  </p>
-</div>
-  </div>
-</section>
-    
-  <!-- Include marked.js for Markdown parsing -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-</body>
+        if (!gif.classList.contains('expanded')) {
+          // Create and show overlay
+          currentOverlay = document.createElement('div');
+          currentOverlay.className = 'overlay';
+          document.body.appendChild(currentOverlay);
+          currentOverlay.style.display = 'block';
+          // Expand the GIF
+          gif.classList.add('expanded');
+          // Set up overlay click to close the expanded view
+          currentOverlay.onclick = () => {
+            gif.classList.remove('expanded');
+            document.body.removeChild(currentOverlay);
+            currentOverlay = null;
+          };
+        } else {
+          // Collapse the GIF if already expanded
+          gif.classList.remove('expanded');
+          if (currentOverlay) {
+            document.body.removeChild(currentOverlay);
+            currentOverlay = null;
+          }
+        }
+      }
+    </script>
+    <!-- Include marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </body>
 </html>
