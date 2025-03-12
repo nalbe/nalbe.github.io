@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>  
-    <link rel="stylesheet" href="/assets/css/styles.css">
-  </head>
+  
+<script>
+function toggleGif() {
+  const gif = document.getElementById('expandingGif');
+  const overlay = document.createElement('div');
+  
+  if (!gif.classList.contains('expanded')) {
+    // Create overlay
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+    overlay.style.display = 'block';
+    
+    // Expand GIF
+    gif.classList.add('expanded');
+    
+    // Close on overlay click
+    overlay.onclick = () => {
+      gif.classList.remove('expanded');
+      document.body.removeChild(overlay);
+    };
+  } else {
+    gif.classList.remove('expanded');
+    document.body.removeChild(overlay);
+  }
+}
+</script>
+  
   <body>
   <h1>Welcome to My Site</h1>
   <link rel="stylesheet" href="assets/css/style.css">
   <div id="content"></div>
+    
   <script>
     // Fetch and render README.md
     fetch('README.md')
@@ -18,21 +43,26 @@
       });
   </script>
     
- <!-- Demo GIF Section -->
-  <section class="demo-section">
-    <div class="container">
-      <h2 class="section-title">App Demo in Action</h2>
-      
-      <div class="gif-wrapper">
-        <img 
-          src="/assets/img/TabTap_demo.gif" 
-          alt="Application demo animation" 
-          class="demo-gif"
-        >
-        <p class="gif-caption">Watch our feature workflow (Click to expand)</p>
-      </div>
+  <head>  
+    <link rel="stylesheet" href="/assets/css/demo.css">
+  </head> <!-- Demo GIF Section -->
+<section class="demo-section">
+  <div class="container">
+    <h2 class="section-title">App Demo in Action</h2>
+    
+    <div class="gif-wrapper">
+      <img 
+        src="/assets/img/TabTap_demo.gif" 
+        alt="Application demo animation" 
+        class="demo-gif"
+        id="expandingGif"
+      >
+      <p class="gif-caption" onclick="toggleGif()">
+        Watch our feature workflow <span class="click-here">(Click to expand)</span>
+      </p>
     </div>
-  </section>
+  </div>
+</section>
     
   <!-- Include marked.js for Markdown parsing -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
