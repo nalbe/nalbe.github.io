@@ -2,27 +2,32 @@
 <html>
   
 <script>
+  let currentOverlay = null;
 function toggleGif() {
   const gif = document.getElementById('expandingGif');
-  const overlay = document.createElement('div');
   
   if (!gif.classList.contains('expanded')) {
     // Create overlay
-    overlay.className = 'overlay';
-    document.body.appendChild(overlay);
-    overlay.style.display = 'block';
+    currentOverlay = document.createElement('div');
+    currentOverlay.className = 'overlay';
+    document.body.appendChild(currentOverlay);
+    currentOverlay.style.display = 'block';
     
     // Expand GIF
     gif.classList.add('expanded');
     
     // Close on overlay click
-    overlay.onclick = () => {
+    currentOverlay.onclick = () => {
       gif.classList.remove('expanded');
-      document.body.removeChild(overlay);
+      document.body.removeChild(currentOverlay);
+      currentOverlay = null;
     };
   } else {
     gif.classList.remove('expanded');
-    document.body.removeChild(overlay);
+    if (currentOverlay) {
+      document.body.removeChild(currentOverlay);
+      currentOverlay = null;
+    }
   }
 }
 </script>
@@ -51,16 +56,17 @@ function toggleGif() {
     <h2 class="section-title">App Demo in Action</h2>
     
     <div class="gif-wrapper">
-      <img 
-        src="/assets/img/TabTap_demo.gif" 
-        alt="Application demo animation" 
-        class="demo-gif"
-        id="expandingGif"
-      >
-      <p class="gif-caption" onclick="toggleGif()">
-        Watch our feature workflow <span class="click-here">(Click to expand)</span>
-      </p>
-    </div>
+  <img 
+    src="/assets/img/TabTap_demo.gif" 
+    alt="Application demo animation" 
+    class="demo-gif"
+    id="expandingGif"
+    onclick="toggleGif()"
+  >
+  <p class="gif-caption">
+    <span class="Watch our feature workflow click-here"></span>
+  </p>
+</div>
   </div>
 </section>
     
