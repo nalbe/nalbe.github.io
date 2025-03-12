@@ -1,42 +1,25 @@
-.gif-wrapper {
-  position: relative;
-  cursor: pointer;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background: transparent; /* Change white to transparent */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.gif-wrapper:hover {
-  transform: translateY(-4px);
-}
-
 .demo-gif {
   width: 100%;
   height: auto;
   border-radius: 4px;
-  display: block;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .demo-gif.expanded {
-  transform: scale(1.5);
+  transform: scale(2.5);
   z-index: 100;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Overlay remains the same */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 99;
   display: none;
 }
-
