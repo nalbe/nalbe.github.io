@@ -4,7 +4,7 @@
 }
 
 .demo-gif {
-  max-width: 600px;
+  max-width: 1600px;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
