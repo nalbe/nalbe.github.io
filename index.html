@@ -58,7 +58,7 @@
                         <a href="https://github.com/nalbe/TabTap">TabTap Utility</a>
                     </h3>
                     <div class="gif-preview" data-aspect="wide">
-                        <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" alt="TabTap demo">
+                        <img src="/assets/img/TabTap_demo.gif" alt="TabTap demo">
                     </div>
                     <p>Windows input management solution featuring:</p>
                     <ul>
@@ -74,7 +74,7 @@
                                 <p>Backwards compatibility mode for Windows 7/8 with fallback implementations.</p>
                             </div>
                         </li>
-                        <li class="preview-trigger" data-fullsize="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif">
+                        <li class="preview-trigger" data-fullsize="/assets/img/TabTap_demo.gif">
                             Zero-dependency architecture
                         </li>
                     </ul>
@@ -101,7 +101,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Denis Jan. All rights reserved.</p>
+            <p>© 2024 Denisov Jan. All rights reserved.</p>
             <p>Windows is a registered trademark of Microsoft Corporation</p>
         </div>
     </footer>
@@ -117,14 +117,21 @@
         document.querySelectorAll('.expandable').forEach(item => {
             item.addEventListener('click', function(e) {
                 e.stopPropagation();
-                this.classList.toggle('expanded');
+                const wasExpanded = this.classList.contains('expanded');
                 
+                // Close all items
+                document.querySelectorAll('.expandable').forEach(otherItem => {
+                    if (otherItem !== this) {
+                        otherItem.classList.remove('expanded');
+                        const content = otherItem.querySelector('.spoiler-content');
+                        content.style.maxHeight = null;
+                    }
+                });
+
+                // Toggle clicked item
+                this.classList.toggle('expanded', !wasExpanded);
                 const content = this.querySelector('.spoiler-content');
-                if (this.classList.contains('expanded')) {
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                } else {
-                    content.style.maxHeight = null;
-                }
+                content.style.maxHeight = !wasExpanded ? content.scrollHeight + 'px' : null;
             });
         });
 
