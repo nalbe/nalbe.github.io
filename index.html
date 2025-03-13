@@ -38,7 +38,9 @@
                         <li>Multi-stage debouncing algorithms</li>
                         <li>Hardware-optimized performance</li>
                         <li>Enterprise-ready documentation</li>
-                        <li class="preview-trigger">Preview avalible</li>
+                        <li class="preview-trigger" data-fullsize="https://gifdb.com/images/high/push-the-button-happy-plankton-ge3xtg7s2xyc9yjz.webp">
+                            Preview avalible
+                        </li>
                     </ul>
                 </li>
                 
@@ -54,7 +56,9 @@
                         <li>Native OSK integration</li>
                         <li>Legacy system compatibility</li>
                         <li>Zero-dependency architecture</li>
-                        <li class="preview-trigger">Preview avalible</li>
+                        <li class="preview-trigger" data-fullsize="/assets/img/TabTap_demo.gif">
+                            Preview avalible
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -84,21 +88,48 @@
         </div>
     </footer>
     
+    <!-- Add modal HTML -->
+    <div class="fullsize-modal">
+        <span class="modal-close">&times;</span>
+        <img src="" alt="Full size preview">
+    </div>
+
     <script>
+        // Hover functionality
         document.querySelectorAll('.preview-trigger').forEach(trigger => {
             const projectCard = trigger.closest('.project-list > li');
             const preview = projectCard.querySelector('.gif-preview');
-    
+
             trigger.addEventListener('mouseenter', () => {
                 preview.style.opacity = '1';
                 preview.style.transform = 'translateX(-50%) translateY(0)';
             });
-    
+
             trigger.addEventListener('mouseleave', () => {
                 preview.style.opacity = '0';
                 preview.style.transform = 'translateX(-50%) translateY(10px)';
             });
+
+            // Click functionality
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const modal = document.querySelector('.fullsize-modal');
+                modal.querySelector('img').src = trigger.dataset.fullsize;
+                modal.style.display = 'flex';
+            });
         });
-        </script>
+
+        // Modal close functionality
+        document.querySelector('.modal-close').addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.querySelector('.fullsize-modal').style.display = 'none';
+        });
+
+        document.querySelector('.fullsize-modal').addEventListener('click', (e) => {
+            if (e.target === document.querySelector('.fullsize-modal')) {
+                document.querySelector('.fullsize-modal').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
