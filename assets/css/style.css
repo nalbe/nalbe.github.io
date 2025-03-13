@@ -1,123 +1,161 @@
-        :root {
-            --ms-blue: #0078D4;
-            --ms-gray-1: #202020;
-            --ms-gray-2: #2D2D2D;
-            --ms-gray-3: #1B1B1B;
-            --ms-text: #E6E6E6;
-            --ms-border: #404040;
-        }
+:root {
+	--ms-blue: #0078D4;
+	--ms-gray-1: #202020;
+	--ms-gray-2: #2D2D2D;
+	--ms-gray-3: #1B1B1B;
+	--ms-text: #E6E6E6;
+	--ms-border: #404040;
+}
 
-        body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--ms-text);
-            margin: 0;
-            background: var(--ms-gray-1);
-            transition: background 0.3s, color 0.3s;
-        }
+body {
+	font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+	line-height: 1.6;
+	color: var(--ms-text);
+	margin: 0;
+	background: var(--ms-gray-1);
+	transition: background 0.3s, color 0.3s;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 24px;
-        }
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px 24px;
+}
 
-        header {
-            background: var(--ms-gray-3);
-            border-bottom: 1px solid var(--ms-border);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
+header {
+	background: var(--ms-gray-3);
+	border-bottom: 1px solid var(--ms-border);
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin: 0;
-            color: var(--ms-blue);
-        }
+h1 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin: 0;
+	color: var(--ms-blue);
+}
 
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--ms-text);
-            border-bottom: 2px solid var(--ms-blue);
-            padding-bottom: 8px;
-            margin: 2rem 0 1.5rem;
-        }
+h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--ms-text);
+	border-bottom: 2px solid var(--ms-blue);
+	padding-bottom: 8px;
+	margin: 2rem 0 1.5rem;
+}
 
-        .card {
-            background: var(--ms-gray-2);
-            border: 1px solid var(--ms-border);
-            border-radius: 4px;
-            padding: 2rem;
-            margin: 1.5rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
+.card {
+	background: var(--ms-gray-2);
+	border: 1px solid var(--ms-border);
+	border-radius: 4px;
+	padding: 2rem;
+	margin: 1.5rem 0;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
 
-        .project-list {
-            list-style: none;
-            padding: 0;
-        }
+.project-list {
+	list-style: none;
+	padding: 0;
+}
 
-        .project-list li {
-            margin: 1.5rem 0;
-            padding: 1rem;
-            border-left: 4px solid transparent; /* Add transparent border */
-            background: var(--ms-gray-3);
-            transition: all 0.1s ease; /* Transition all properties */
-            position: relative; /* Add positioning context */
-            left: 0; /* Initial position */
-        }
+.project-list li {
+	margin: 1.5rem 0;
+	padding: 1rem;
+	border-left: 4px solid transparent; /* Add transparent border */
+	background: var(--ms-gray-3);
+	transition: all 0.1s ease; /* Transition all properties */
+	position: relative; /* Add positioning context */
+	left: 0; /* Initial position */
+}
 
-        .project-list li:hover {
-            left: 4px; /* Move right using positioning instead of transform */
-            border-left-color: var(--ms-blue); /* Animate border instead of transform */
-            background: var(--ms-gray-2);
-        }
+.project-list li:hover {
+	left: 4px; /* Move right using positioning instead of transform */
+	border-left-color: var(--ms-blue); /* Animate border instead of transform */
+	background: var(--ms-gray-2);
+}
 
-        a {
-            color: var(--ms-blue);
-            text-decoration: none;
-            font-weight: 500;
-        }
+a {
+	color: var(--ms-blue);
+	text-decoration: none;
+	font-weight: 500;
+}
 
-        a:hover {
-            color: #4CAFED;
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-        }
+a:hover {
+	color: #4CAFED;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+}
 
-        .button {
-            background: var(--ms-blue);
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 4px;
-            display: inline-block;
-            margin: 4px 0;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
+.button {
+	background: var(--ms-blue);
+	color: white !important;
+	padding: 8px 16px;
+	border-radius: 4px;
+	display: inline-block;
+	margin: 4px 0;
+	border: 1px solid rgba(255,255,255,0.1);
+}
 
-        .button:hover {
-            background: #106EBE;
-            text-decoration: none;
-        }
+.button:hover {
+	background: #106EBE;
+	text-decoration: none;
+}
 
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
+.contact-info {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin-top: 1.5rem;
+}
 
-        footer {
-            background: var(--ms-gray-3);
-            border-top: 1px solid var(--ms-border);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
+footer {
+	background: var(--ms-gray-3);
+	border-top: 1px solid var(--ms-border);
+	text-align: center;
+	padding: 2rem;
+	margin-top: 4rem;
+}
 
-        ::selection {
-            background: var(--ms-blue);
-            color: white;
-        }
+::selection {
+	background: var(--ms-blue);
+	color: white;
+}
+
+.gif-preview {
+    position: absolute;
+    z-index: 500;
+    width: 300px;
+    max-width: 90vw;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    top: 110%; /* Position below project title */
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    border: 2px solid var(--ms-border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--ms-gray-3);
+}
+
+.project-list li:hover .gif-preview {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 768px) {
+    .gif-preview {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 1rem;
+    }
+    
+    .project-list li:hover .gif-preview {
+        transform: none;
+    }
+}
