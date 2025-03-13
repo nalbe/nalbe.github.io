@@ -7,7 +7,7 @@
 }
 
 .demo-gif.expanded {
-  transform: scale(1.5);
+  transform: scale(1.0);
   z-index: 100;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
