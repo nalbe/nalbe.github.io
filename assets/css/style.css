@@ -24,6 +24,12 @@ pre, code {
   border-radius: 5px;
 }
 
+.section {
+  margin-bottom: 50px; /* Space between sections */
+  padding: 20px; /* Space inside sections */
+  background-color: #f9f9f9; /* Optional background */
+  border-radius: 8px; /* Optional rounded corners */
+}
 
 .demo-gif {
   width: 100%;
@@ -34,7 +40,7 @@ pre, code {
 }
 
 .demo-gif.expanded {
-  transform: scale(1.5);
+  transform: scale(1.0);
   z-index: 100;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
