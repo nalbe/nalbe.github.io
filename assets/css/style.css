@@ -62,13 +62,16 @@
         .project-list li {
             margin: 1.5rem 0;
             padding: 1rem;
-            border-left: 4px solid var(--ms-blue);
+            border-left: 4px solid transparent; /* Add transparent border */
             background: var(--ms-gray-3);
-            transition: transform 0.1s ease;
+            transition: all 0.1s ease; /* Transition all properties */
+            position: relative; /* Add positioning context */
+            left: 0; /* Initial position */
         }
 
         .project-list li:hover {
-            transform: translateX(4px);
+            left: 4px; /* Move right using positioning instead of transform */
+            border-left-color: var(--ms-blue); /* Animate border instead of transform */
             background: var(--ms-gray-2);
         }
 
