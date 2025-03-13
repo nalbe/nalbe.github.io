@@ -29,7 +29,6 @@
                 <li>
                     <h3>
                         <a href="https://github.com/nalbe/IPushButton">IPushButton Library</a>
-                        <span class="preview-hint">(hover to preview)</span>
                     </h3>
                     <div class="gif-preview" data-aspect="wide">
                         <img src="https://gifdb.com/images/high/push-the-button-happy-plankton-ge3xtg7s2xyc9yjz.webp" alt="IPushButton demo">
@@ -39,13 +38,13 @@
                         <li>Multi-stage debouncing algorithms</li>
                         <li>Hardware-optimized performance</li>
                         <li>Enterprise-ready documentation</li>
+                        <li class="preview-trigger">Preview</li>
                     </ul>
                 </li>
                 
                 <li>
                     <h3>
                         <a href="https://github.com/nalbe/TabTap">TabTap Utility</a>
-                        <span class="preview-hint">(hover to preview)</span>
                     </h3>
                     <div class="gif-preview" data-aspect="wide">
                         <img src="/assets/img/TabTap_demo.gif" alt="TabTap demo">
@@ -55,6 +54,7 @@
                         <li>Native OSK integration</li>
                         <li>Legacy system compatibility</li>
                         <li>Zero-dependency architecture</li>
+                        <li class="preview-trigger">Preview</li>
                     </ul>
                 </li>
             </ul>
@@ -83,5 +83,22 @@
             <p>Windows is a registered trademark of Microsoft Corporation</p>
         </div>
     </footer>
+    
+    <script>
+        document.querySelectorAll('.preview-trigger').forEach(trigger => {
+            const projectCard = trigger.closest('.project-list > li');
+            const preview = projectCard.querySelector('.gif-preview');
+    
+            trigger.addEventListener('mouseenter', () => {
+                preview.style.opacity = '1';
+                preview.style.transform = 'translateX(-50%) translateY(0)';
+            });
+    
+            trigger.addEventListener('mouseleave', () => {
+                preview.style.opacity = '0';
+                preview.style.transform = 'translateX(-50%) translateY(10px)';
+            });
+        });
+        </script>
 </body>
 </html>
