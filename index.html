@@ -31,15 +31,24 @@
                         <a href="https://github.com/nalbe/IPushButton">IPushButton Library</a>
                     </h3>
                     <div class="gif-preview" data-aspect="wide">
-                        <img src="https://gifdb.com/images/high/push-the-button-happy-plankton-ge3xtg7s2xyc9yjz.webp" alt="IPushButton demo">
+                        <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" alt="IPushButton demo">
                     </div>
                     <p>Professional-grade Arduino library implementing advanced input handling patterns. Features include:</p>
                     <ul>
-                        <li>Multi-stage debouncing algorithms</li>
-                        <li>Hardware-optimized performance</li>
-                        <li>Enterprise-ready documentation</li>
-                        <li class="preview-trigger" data-fullsize="https://gifdb.com/images/high/push-the-button-happy-plankton-ge3xtg7s2xyc9yjz.webp">
-                            Preview avalible
+                        <li class="expandable">
+                            Multi-stage debouncing algorithms
+                            <div class="spoiler-content">
+                                <p>Combination of hardware and software debouncing techniques with adaptive threshold detection.</p>
+                            </div>
+                        </li>
+                        <li class="expandable">
+                            Hardware-optimized performance
+                            <div class="spoiler-content">
+                                <p>Assembly-level optimizations for AVR and ARM architectures with minimal clock cycle overhead.</p>
+                            </div>
+                        </li>
+                        <li class="preview-trigger" data-fullsize="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif">
+                            Enterprise-ready documentation
                         </li>
                     </ul>
                 </li>
@@ -49,15 +58,24 @@
                         <a href="https://github.com/nalbe/TabTap">TabTap Utility</a>
                     </h3>
                     <div class="gif-preview" data-aspect="wide">
-                        <img src="/assets/img/TabTap_demo.gif" alt="TabTap demo">
+                        <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" alt="TabTap demo">
                     </div>
                     <p>Windows input management solution featuring:</p>
                     <ul>
-                        <li>Native OSK integration</li>
-                        <li>Legacy system compatibility</li>
-                        <li>Zero-dependency architecture</li>
-                        <li class="preview-trigger" data-fullsize="/assets/img/TabTap_demo.gif">
-                            Preview avalible
+                        <li class="expandable">
+                            Native OSK integration
+                            <div class="spoiler-content">
+                                <p>Direct Win32 API integration with custom gesture recognition pipeline.</p>
+                            </div>
+                        </li>
+                        <li class="expandable">
+                            Legacy system compatibility
+                            <div class="spoiler-content">
+                                <p>Backwards compatibility mode for Windows 7/8 with fallback implementations.</p>
+                            </div>
+                        </li>
+                        <li class="preview-trigger" data-fullsize="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif">
+                            Zero-dependency architecture
                         </li>
                     </ul>
                 </li>
@@ -95,6 +113,21 @@
     </div>
 
     <script>
+        // Expandable spoiler functionality
+        document.querySelectorAll('.expandable').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('expanded');
+                
+                const content = this.querySelector('.spoiler-content');
+                if (this.classList.contains('expanded')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+
         // Hover functionality
         document.querySelectorAll('.preview-trigger').forEach(trigger => {
             const projectCard = trigger.closest('.project-list > li');
