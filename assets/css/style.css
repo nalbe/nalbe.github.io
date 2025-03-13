@@ -244,3 +244,14 @@ footer {
     border-left: 2px solid var(--ms-blue);
     margin-bottom: 4px; /* Add bottom margin to compensate */
 }
+
+.preview-trigger .preview-hint {
+    font-size: 0.6em;         /* Relative size adjustment */
+    font-family: 'Segoe UI', sans-serif; 
+    color: #8AB4F8;           /* Light blue accent */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 4px;
+}
+
