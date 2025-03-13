@@ -1,60 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="/assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nalbe@github:~$</title>
+    <style>
+        body {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background-color: #1a1a1a;
+            color: #00ff00;
+            line-height: 1.6;
+            margin: 2rem;
+            max-width: 800px;
+        }
+
+        a {
+            color: #00ffff;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #ff00ff;
+            text-decoration: none;
+        }
+
+        h1::before { content: "# "; }
+        h2::before { content: "## "; }
+
+        .container {
+            border: 1px solid #00ff0040;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .prompt::before {
+            content: "> ";
+            color: #00ff00;
+        }
+
+        .comment {
+            color: #008000;
+        }
+
+        .project-list {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        .project-list li::before {
+            content: "• ";
+            color: #00ff00;
+        }
+
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to My Site</h1>
-  <div id="content"></div>
-    <script>
-      // Fetch and render README.md
-      fetch('README.md')
-        .then(response => response.text())
-        .then(text => {
-          // Convert Markdown to HTML (using browser's built-in parser)
-          const html = marked.parse(text); // Requires marked.js library
-          document.getElementById('content').innerHTML = html;
-        });
-    </script>
- <section class="section">
-   <h2>TabTap Demo Section</h2>
-  <img 
-    src="/assets/img/TabTap_demo.gif" 
-    alt="Application demo animation" 
-    class="demo-gif"
-    id="expandingGif"
-    onclick="toggleGif()"
-  >
-  </section>
-  <script>
-    let currentOverlay = null;
-  
-    function toggleGif() {
-      const gif = document.getElementById('expandingGif');
-      
-      if (!gif.classList.contains('expanded')) {
-        currentOverlay = document.createElement('div');
-        currentOverlay.className = 'overlay';
-        document.body.appendChild(currentOverlay);
-        currentOverlay.style.display = 'block';
-  
-        gif.classList.add('expanded');
-  
-        currentOverlay.onclick = () => {
-          gif.classList.remove('expanded');
-          document.body.removeChild(currentOverlay);
-          currentOverlay = null;
-        };
-      } else {
-        gif.classList.remove('expanded');
-        if (currentOverlay) {
-          document.body.removeChild(currentOverlay);
-          currentOverlay = null;
-        }
-      }
-    }
-  </script>
-  <!-- Include marked.js if you're parsing Markdown -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <pre>
+  _  _    __    __    __   ____ 
+ / |/ \  /  \  /  \  /  \ / ___)
+| || | || |\/| | |\/| | | |\___ \
+| || | || |  | | |  | |_| |____) )
+ \_|\_/ \_|  |_\_|  |____/(____/ 
+    </pre>
+
+    <div class="container">
+        <h1>nalbe.github.io</h1>
+        <p class="comment">// Welcome to my digital terminal</p>
+        <p class="prompt">system --status</p>
+        <p>System initialized: <span class="blink">■</span></p>
+    </div>
+
+    <div class="container">
+        <h2>$ about_me</h2>
+        <p class="prompt">user --profile --verbose</p>
+        <p>> Passionate software developer<br>
+           > Specialization: Web dev, embedded systems, dark arts<br>
+           > Current status: [REDACTED]</p>
+    </div>
+
+    <div class="container">
+        <h2>$ project_list --featured</h2>
+        <ul class="project-list">
+            <li>
+                <a href="https://github.com/nalbe/IPushButton">IPushButton</a>
+                <span class="comment">// Arduino button library with quantum-level debouncing</span>
+            </li>
+            <li>
+                <a href="https://github.com/nalbe/TabTap">TabTap</a>
+                <span class="comment">// Windows keyboard resurrection toolkit</span>
+            </li>
+            <li>
+                <a href="https://github.com/nalbe/project-three">[REDACTED]</a>
+                <span class="comment">// CLASSIFIED - CLEARANCE LEVEL 5 REQUIRED</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>$ contact --protocol=secure</h2>
+        <p class="prompt">connect --method=email</p>
+        <p>> <a href="mailto:nalbe666@gmail.com">nalbe666@protonmail.com</a> <span class="comment">// (PGP key available)</span></p>
+        
+        <p class="prompt">connect --method=social</p>
+        <p>> LinkedIn: <a href="#">/dev/null</a><br>
+           > Twitter: <a href="#">@404</a></p>
+    </div>
+
+    <div class="container">
+        <p class="comment">// System ready for input<br>
+        // Last login: Never<br>
+        // Uptime: 24/7/365</p>
+        <p class="prompt">_<span class="blink">█</span></p>
+    </div>
 </body>
 </html>
