@@ -1,61 +1,120 @@
-/* Dark theme styles */
-body {
-  background-color: #1a1a1a;  /* Dark background */
-  color: #e6e6e6;            /* Light text */
-  font-family: 'Consolas', 'Courier New', Courier, monospace;
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
-  padding: 20px;
-}
+        :root {
+            --ms-blue: #0078D4;
+            --ms-gray-1: #202020;
+            --ms-gray-2: #2D2D2D;
+            --ms-gray-3: #1B1B1B;
+            --ms-text: #E6E6E6;
+            --ms-border: #404040;
+        }
 
-a {
-  color: #58a6ff;            /* Bright blue links */
-}
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--ms-text);
+            margin: 0;
+            background: var(--ms-gray-1);
+            transition: background 0.3s, color 0.3s;
+        }
 
-h1, h2, h3 {
-  color: #c0c0c0;            /* White headings */
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
 
-/* Style code blocks (if your README has code) */
-pre, code {
-  background-color: #2d2d2d;
-  color: #f8f8f2;
-  padding: 10px;
-  border-radius: 5px;
-}
+        header {
+            background: var(--ms-gray-3);
+            border-bottom: 1px solid var(--ms-border);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
 
-.section {
-  margin-bottom: 50px; /* Space between sections */
-  padding: 20px; /* Space inside sections */
-  background: none; /* Optional background */
-  border-radius: 8px; /* Optional rounded corners */
-}
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 0;
+            color: var(--ms-blue);
+        }
 
-.demo-gif {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--ms-text);
+            border-bottom: 2px solid var(--ms-blue);
+            padding-bottom: 8px;
+            margin: 2rem 0 1.5rem;
+        }
 
-.demo-gif.expanded {
-  transform: scale(1.5);
-  position: relative; /* Required for z-index */
-  z-index: 100; /* Higher than overlay */
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
+        .card {
+            background: var(--ms-gray-2);
+            border: 1px solid var(--ms-border);
+            border-radius: 4px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
 
-/* Overlay remains the same */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 99; /* Keep below image */
-  display: none;
-}
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
 
+        .project-list li {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border-left: 4px solid var(--ms-blue);
+            background: var(--ms-gray-3);
+            transition: transform 0.1s ease;
+        }
+
+        .project-list li:hover {
+            transform: translateX(4px);
+            background: var(--ms-gray-2);
+        }
+
+        a {
+            color: var(--ms-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #4CAFED;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+
+        .button {
+            background: var(--ms-blue);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 4px 0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .button:hover {
+            background: #106EBE;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        footer {
+            background: var(--ms-gray-3);
+            border-top: 1px solid var(--ms-border);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        ::selection {
+            background: var(--ms-blue);
+            color: white;
+        }
