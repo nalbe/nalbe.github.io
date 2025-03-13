@@ -121,7 +121,7 @@ footer {
     background: var(--ms-blue);
     color: white;
 }
-
+  
 /* Different aspect ratio handling */
 .gif-preview[data-aspect="wide"] {
     position: absolute;
@@ -129,6 +129,10 @@ footer {
     width: 500px;
     height: 281px; /* 16:9 */
     max-width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     top: 110%; /* Position below project title */
@@ -140,6 +144,21 @@ footer {
     border-radius: 4px;
     overflow: hidden;
     background: var(--ms-gray-3);
+}
+
+.gif-preview img {
+    /* Smart scaling */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: scale-down; /* Key property */
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.gif-preview:hover img {
+    transform: scale(1.02); /* Optional hover effect */
 }
 
 .project-list li:hover .gif-preview {
@@ -162,4 +181,3 @@ footer {
         transform: none;
     }
 }
-
