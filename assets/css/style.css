@@ -27,7 +27,7 @@ pre, code {
 .section {
   margin-bottom: 50px; /* Space between sections */
   padding: 20px; /* Space inside sections */
-  background-color: #000000; /* Optional background */
+  background-color: rgba(0,0,0,0.0); /* Optional background */
   border-radius: 8px; /* Optional rounded corners */
 }
 
