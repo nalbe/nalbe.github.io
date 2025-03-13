@@ -161,11 +161,6 @@ footer {
     transform: scale(1.02); /* Optional hover effect */
 }
 
-.project-list li:hover .gif-preview {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-
 @media (max-width: 768px) {
     .gif-preview {
         position: relative;
@@ -177,7 +172,8 @@ footer {
         margin-top: 1rem;
     }
     
-    .project-list li:hover .gif-preview {
-        transform: none;
-    }
+	.preview-trigger {
+		cursor: help;
+		position: relative;
+	}
 }
