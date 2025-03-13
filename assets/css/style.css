@@ -70,6 +70,7 @@ h2 {
 }
 
 .project-list li:hover {
+    cursor: default;
     left: 4px; /* Move right using positioning instead of transform */
     border-left-color: var(--ms-blue); /* Animate border instead of transform */
     background: var(--ms-gray-2);
@@ -216,4 +217,30 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.expandable {
+    cursor: pointer;
+    position: relative;
+    padding-left: 24px;
+    transition: 
+        background-color 0.2s ease,
+        transform 0.2s ease; /* Only transition specific properties */
+    margin: 2px 0; /* Add small constant margin */
+}
+
+.expandable.expanded {
+    background: var(--ms-gray-3);
+    /* Remove margin change here */
+    transform: translateY(10px); /* Use transform instead of margin for movement */
+}
+
+.spoiler-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother timing function */
+    margin-top: 8px;
+    padding-left: 16px;
+    border-left: 2px solid var(--ms-blue);
+    margin-bottom: 4px; /* Add bottom margin to compensate */
 }
