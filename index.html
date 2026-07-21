@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <link rel="preload" href="/assets/img/placeholder.png" as="image">
-    <link rel="preload" href="/assets/img/TabTap_demo.gif" as="image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -58,36 +57,42 @@
                         </li>
                     </ul>
                 </li>
-                
+
                 <li>
                     <h3>
-                        <a href="https://github.com/nalbe/TabTap">TabTap Utility</a>
+                        <a href="https://github.com/nalbe/IKeybind">IKeybind Library</a>
                     </h3>
                     <div class="gif-preview" data-aspect="wide">
-                        <img src="/assets/img/TabTap_demo.gif" alt="TabTap demo">
+                        <img src="/assets/img/placeholder.png" alt="IKeybind demo">
                     </div>
-                    <p>Windows 10 on-screen keyboard enhancer that works with original Microsoft components:</p>
+                    <p>Arduino keybind handler built on IPushButton for multi-key combinations and event-driven input:</p>
                     <ul>
                         <li class="expandable">
-                            Tray mode operation
+                            Multi-key combination support
                             <div class="spoiler-content">
-                                <p>Keep the keyboard accessible without taskbar clutter.</p>
+                                <p>Define combinations of two or more physical buttons with modifier and trigger key roles. The last pin in a combination acts as the trigger while others serve as modifiers.</p>
                             </div>
                         </li>
                         <li class="expandable">
-                            Customizable appearance
+                            Event state detection
                             <div class="spoiler-content">
-                                <p>Adjust transparency levels and use custom background images for tab.</p>
+                                <p>Each combination can fire on specific trigger key states: <code>release</code>, <code>rapid</code> (rapid press), or <code>hold</code>. Enables rich input patterns from a small number of buttons.</p>
                             </div>
                         </li>
                         <li class="expandable">
-                            Focus-aware behavior
+                            Compile-time configuration
                             <div class="spoiler-content">
-                                <p>Maintains application focus when hiding the keyboard.</p>
+                                <p>Uses C++ templates to set the number of keys and events at compile time: <code>IKeybind&lt;Key_Cnt, Event_Cnt&gt;</code>. No dynamic allocation, ideal for resource-constrained embedded systems.</p>
                             </div>
                         </li>
-                        <li class="preview-trigger" data-fullsize="/assets/img/TabTap_demo.gif">
-                            Demo <span class="preview-hint">[available]</span>
+                        <li class="expandable">
+                            Seamless IPushButton integration
+                            <div class="spoiler-content">
+                                <p>Initialized with an array of <code>IPushButton</code> objects. Supports per-key settings like <code>repeatDelay()</code> via <code>forEachKey()</code>. Call <code>kb.update()</code> in loop and check events with <code>kb.isEvent(index)</code>.</p>
+                            </div>
+                        </li>
+                        <li class="preview-trigger" data-fullsize="/assets/img/placeholder.png">
+                            Demo <span class="preview-hint">[not available]</span>
                         </li>
                     </ul>
                 </li>
@@ -117,7 +122,7 @@
             <p>Windows is a registered trademark of Microsoft Corporation</p>
         </div>
     </footer>
-    
+
     <!-- Add modal HTML -->
     <div class="fullsize-modal">
         <span class="modal-close">&times;</span>
