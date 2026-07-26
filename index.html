@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/js/spoiler.js" defer></script>
-    <title>Denisov Jan - Microsoft Dark Theme</title>
+    <title>Embedded Developer - Arduino Input Libraries</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Denisov Jan</h1>
-            <p>Software Engineer & Windows Platform Developer</p>
+            <h1>Embedded Systems Developer</h1>
+            <p>Arduino Library Author & Firmware Engineer specializing in robust hardware input handling.</p>
         </div>
     </header>
 
     <div class="container">
         <div class="card">
             <h2>About</h2>
-            <p>Microsoft Platform developer specializing in low-level systems and developer tools. Focused on creating robust solutions for Windows environments and embedded systems.</p>
+            <p>Embedded systems developer focused on Arduino and resource-constrained environments. I create lightweight, efficient, and robust C++ libraries for hardware input handling, debouncing, and event-driven firmware architecture, ensuring maximum reliability with minimal memory footprint.</p>
         </div>
 
         <div class="card">
@@ -32,24 +32,24 @@
                     <div class="gif-preview" data-aspect="wide">
                         <img src="/assets/img/placeholder.png" alt="IPushButton demo">
                     </div>
-                    <p>Lightweight Arduino button handler that solves real-world input problems:</p>
+                    <p>A lightweight, zero-allocation Arduino library for robust button input handling. Solves real-world hardware input problems with elegance and efficiency:</p>
                     <ul>
                         <li class="expandable">
-                            Customizable debouncing algorithms
+                            Advanced debouncing
                             <div class="spoiler-content">
-                                <p>Combines hardware timing checks with software smoothing to eliminate erratic button behavior.</p>
+                                <p>Combines hardware timing checks with software smoothing to completely eliminate erratic button behavior and contact bounce.</p>
                             </div>
                         </li>
                         <li class="expandable">
-                            Event detection system
+                            Rich event detection
                             <div class="spoiler-content">
-                                <p>Recognizes different interaction patterns - single clicks, long presses, rapid sequences, etc.</p>
+                                <p>Reliably recognizes distinct interaction patterns: single clicks, long presses, double clicks, and rapid sequences.</p>
                             </div>
                         </li>
                         <li class="expandable">
-                            Easy integration
+                            Seamless integration
                             <div class="spoiler-content">
-                                <p>Simple setup with example sketches for common use cases.</p>
+                                <p>Minimal setup with clear, well-documented example sketches for immediate use in any Arduino project.</p>
                             </div>
                         </li>
                         <li class="preview-trigger" data-fullsize="/assets/img/placeholder.png">
@@ -65,30 +65,30 @@
                     <div class="gif-preview" data-aspect="wide">
                         <img src="/assets/img/placeholder.png" alt="IKeybind demo">
                     </div>
-                    <p>Arduino keybind handler built on IPushButton for multi-key combinations and event-driven input:</p>
+                    <p>An advanced Arduino keybind handler built on top of IPushButton, designed for multi-key combinations and complex event-driven input scenarios:</p>
                     <ul>
                         <li class="expandable">
-                            Multi-key combination support
+                            Multi-key combinations
                             <div class="spoiler-content">
-                                <p>Define combinations of two or more physical buttons with modifier and trigger key roles. The last pin in a combination acts as the trigger while others serve as modifiers.</p>
+                                <p>Define combinations of two or more physical buttons, assigning modifier and trigger key roles. The last pin in a combination acts as the trigger while others serve as modifiers.</p>
                             </div>
                         </li>
                         <li class="expandable">
                             Event state detection
                             <div class="spoiler-content">
-                                <p>Each combination can fire on specific trigger key states: <code>release</code>, <code>rapid</code> (rapid press), or <code>hold</code>. Enables rich input patterns from a small number of buttons.</p>
+                                <p>Each combination can fire on specific trigger key states: <code>release</code>, <code>rapid</code> (rapid press), or <code>hold</code>. Enables rich input patterns from a minimal number of physical buttons.</p>
                             </div>
                         </li>
                         <li class="expandable">
                             Compile-time configuration
                             <div class="spoiler-content">
-                                <p>Uses C++ templates to set the number of keys and events at compile time: <code>IKeybind&lt;Key_Cnt, Event_Cnt&gt;</code>. No dynamic allocation, ideal for resource-constrained embedded systems.</p>
+                                <p>Leverages C++ templates to define the number of keys and events at compile time (<code>IKeybind&lt;Key_Cnt, Event_Cnt&gt;</code>). Ensures zero dynamic memory allocation, making it ideal for resource-constrained microcontrollers like AVR.</p>
                             </div>
                         </li>
                         <li class="expandable">
-                            Seamless IPushButton integration
+                            Modular architecture
                             <div class="spoiler-content">
-                                <p>Initialized with an array of <code>IPushButton</code> objects. Supports per-key settings like <code>repeatDelay()</code> via <code>forEachKey()</code>. Call <code>kb.update()</code> in loop and check events with <code>kb.isEvent(index)</code>.</p>
+                                <p>Initialized directly with an array of <code>IPushButton</code> objects. Supports per-key configurations like <code>repeatDelay()</code> via <code>forEachKey()</code>. Simply call <code>kb.update()</code> in your main loop and check events with <code>kb.isEvent(index)</code>.</p>
                             </div>
                         </li>
                         <li class="preview-trigger" data-fullsize="/assets/img/placeholder.png">
@@ -104,13 +104,13 @@
             <div class="contact-info">
                 <div>
                     <h3>Professional Network</h3>
-                    <a href="mailto:nalbe666@gmail.com" class="button">Email Contact</a>
+                    <a href="mailto:contact@example.com" class="button">Email Contact</a>
                     <a href="#" class="button">LinkedIn Profile</a>
                 </div>
                 <div>
                     <h3>Development Platforms</h3>
                     <a href="https://github.com/nalbe" class="button">GitHub Profile</a>
-                    <a href="#" class="button">Microsoft Store</a>
+                    <a href="#" class="button">Arduino Library Manager</a>
                 </div>
             </div>
         </div>
@@ -118,8 +118,8 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Denisov Jan. All rights reserved.</p>
-            <p>Windows is a registered trademark of Microsoft Corporation</p>
+            <p>© 2024 Embedded Developer. All rights reserved.</p>
+            <p>Arduino is a registered trademark of Arduino LLC.</p>
         </div>
     </footer>
 
