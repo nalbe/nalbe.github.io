@@ -1,132 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preload" href="/assets/img/placeholder.png" as="image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/spoiler.js" defer></script>
-    <title>Embedded Developer - Arduino Input Libraries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>nalbe - C++ / Embedded Developer</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Embedded Systems Developer</h1>
-            <p>Arduino Library Author & Firmware Engineer specializing in robust hardware input handling.</p>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="card">
-            <h2>About</h2>
-            <p>Embedded systems developer focused on Arduino and resource-constrained environments. I create lightweight, efficient, and robust C++ libraries for hardware input handling, debouncing, and event-driven firmware architecture, ensuring maximum reliability with minimal memory footprint.</p>
-        </div>
-
-        <div class="card">
-            <h2>Featured Projects</h2>
-            <ul class="project-list">
-                <li>
-                    <h3>
-                        <a href="https://github.com/nalbe/IPushButton">IPushButton Library</a>
-                    </h3>
-                    <div class="gif-preview" data-aspect="wide">
-                        <img src="/assets/img/placeholder.png" alt="IPushButton demo">
-                    </div>
-                    <p>A lightweight, zero-allocation Arduino library for robust button input handling. Solves real-world hardware input problems with elegance and efficiency:</p>
-                    <ul>
-                        <li class="expandable">
-                            Advanced debouncing
-                            <div class="spoiler-content">
-                                <p>Combines hardware timing checks with software smoothing to completely eliminate erratic button behavior and contact bounce.</p>
-                            </div>
-                        </li>
-                        <li class="expandable">
-                            Rich event detection
-                            <div class="spoiler-content">
-                                <p>Reliably recognizes distinct interaction patterns: single clicks, long presses, double clicks, and rapid sequences.</p>
-                            </div>
-                        </li>
-                        <li class="expandable">
-                            Seamless integration
-                            <div class="spoiler-content">
-                                <p>Minimal setup with clear, well-documented example sketches for immediate use in any Arduino project.</p>
-                            </div>
-                        </li>
-                        <li class="preview-trigger" data-fullsize="/assets/img/placeholder.png">
-                            Demo <span class="preview-hint">[not available]</span>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <h3>
-                        <a href="https://github.com/nalbe/IKeybind">IKeybind Library</a>
-                    </h3>
-                    <div class="gif-preview" data-aspect="wide">
-                        <img src="/assets/img/placeholder.png" alt="IKeybind demo">
-                    </div>
-                    <p>An advanced Arduino keybind handler built on top of IPushButton, designed for multi-key combinations and complex event-driven input scenarios:</p>
-                    <ul>
-                        <li class="expandable">
-                            Multi-key combinations
-                            <div class="spoiler-content">
-                                <p>Define combinations of two or more physical buttons, assigning modifier and trigger key roles. The last pin in a combination acts as the trigger while others serve as modifiers.</p>
-                            </div>
-                        </li>
-                        <li class="expandable">
-                            Event state detection
-                            <div class="spoiler-content">
-                                <p>Each combination can fire on specific trigger key states: <code>release</code>, <code>rapid</code> (rapid press), or <code>hold</code>. Enables rich input patterns from a minimal number of physical buttons.</p>
-                            </div>
-                        </li>
-                        <li class="expandable">
-                            Compile-time configuration
-                            <div class="spoiler-content">
-                                <p>Leverages C++ templates to define the number of keys and events at compile time (<code>IKeybind&lt;Key_Cnt, Event_Cnt&gt;</code>). Ensures zero dynamic memory allocation, making it ideal for resource-constrained microcontrollers like AVR.</p>
-                            </div>
-                        </li>
-                        <li class="expandable">
-                            Modular architecture
-                            <div class="spoiler-content">
-                                <p>Initialized directly with an array of <code>IPushButton</code> objects. Supports per-key configurations like <code>repeatDelay()</code> via <code>forEachKey()</code>. Simply call <code>kb.update()</code> in your main loop and check events with <code>kb.isEvent(index)</code>.</p>
-                            </div>
-                        </li>
-                        <li class="preview-trigger" data-fullsize="/assets/img/placeholder.png">
-                            Demo <span class="preview-hint">[not available]</span>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <div>
-                    <h3>Professional Network</h3>
-                    <a href="mailto:contact@example.com" class="button">Email Contact</a>
-                    <a href="#" class="button">LinkedIn Profile</a>
-                </div>
-                <div>
-                    <h3>Development Platforms</h3>
-                    <a href="https://github.com/nalbe" class="button">GitHub Profile</a>
-                    <a href="#" class="button">Arduino Library Manager</a>
+    <div class="page">
+        <header class="hero">
+            <div class="hero-inner">
+                <h1 class="hero-title">nalbe</h1>
+                <p class="hero-tagline">C++ · embedded · systems utilities</p>
+                <p class="hero-sub">I build small, sharp tools and firmware libraries. From Arduino input handling to Windows tray utilities.</p>
+                <div class="hero-links">
+                    <a class="pill" href="https://github.com/nalbe" target="_blank" rel="noopener">GitHub</a>
                 </div>
             </div>
-        </div>
-    </div>
+        </header>
 
-    <footer>
-        <div class="container">
-            <p>© 2024 Embedded Developer. All rights reserved.</p>
-            <p>Arduino is a registered trademark of Arduino LLC.</p>
-        </div>
-    </footer>
+        <main class="container">
+            <section class="projects">
+                <div class="grid">
+                    <a class="tile" href="https://github.com/nalbe/DisableMenuAcceleration" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">DisableMenuAcceleration</span>
+                            <span class="tile-lang">C++</span>
+                        </div>
+                        <p class="tile-desc">Windows tray tool that stops Alt from grabbing focus into the window menu, so input-language hotkeys (Alt/Shift/Ctrl) always work.</p>
+                    </a>
 
-    <!-- Add modal HTML -->
-    <div class="fullsize-modal">
-        <span class="modal-close">&times;</span>
-        <img src="" alt="Full size preview">
+                    <a class="tile" href="https://github.com/nalbe/Forest" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">Forest</span>
+                            <span class="tile-lang">C++</span>
+                        </div>
+                        <p class="tile-desc">Modern C++17 header-only intrusive forest container with traversal policies and an STL-like interface.</p>
+                    </a>
+
+                    <a class="tile" href="https://github.com/nalbe/IPushButton" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">IPushButton</span>
+                            <span class="tile-lang">C++</span>
+                        </div>
+                        <p class="tile-desc">Zero-allocation Arduino library for robust button handling: debouncing, push, hold, release and rich event detection.</p>
+                    </a>
+
+                    <a class="tile" href="https://github.com/nalbe/IKeybind" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">IKeybind</span>
+                            <span class="tile-lang">C++</span>
+                        </div>
+                        <p class="tile-desc">Templated Arduino keybind manager built on IPushButton. Multi-key combinations and event-driven input patterns.</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="about">
+                <h2>About</h2>
+                <p>Embedded systems developer focused on Arduino and resource-constrained environments, with a soft spot for small, well-made PC utilities. I write lightweight C++ that stays out of your way.</p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>© 2026 nalbe.</p>
+                <p>Arduino is a registered trademark of Arduino LLC.</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
