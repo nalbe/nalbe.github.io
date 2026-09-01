@@ -14,6 +14,21 @@ a selection of projects. Hosted for free on GitHub Pages.
 | [IPushButton](https://github.com/nalbe/IPushButton) | C++ | Zero-allocation Arduino library for robust button handling: debouncing, push, hold, release, rich event detection. |
 | [IKeybind](https://github.com/nalbe/IKeybind) | C++ | Templated Arduino keybind manager built on IPushButton; multi-key combinations and event-driven patterns. |
 
+### Android / GSI page
+
+A second page ([`android.html`](android.html)) lists the Blackview Shark 8
+projects: IMS / VoLTE patch, LED daemon, camera patch, Vulkan HWUI module and
+the logspam cosmetics KernelSU module. Linked from the main page hero and a
+teaser banner.
+
+| Project | Language | What it is |
+|---------|----------|------------|
+| [blackview-shark8-ims-patch](https://github.com/nalbe/blackview-shark8-ims-patch) | Smali | VoLTE + VoWiFi (IMS) framework patch for the Shark 8 (MTK MT6789, phh GSI Android 14, MegaFon). |
+| [blackview-shark8-led-daemon](https://github.com/nalbe/blackview-shark8-led-daemon) | C | Root module driving the notification / charge LED on the Shark 8. |
+| [blackview-shark8-camera-patch](https://github.com/nalbe/blackview-shark8-camera-patch) | Java | Patched stock camera APK for GSI - restores HDR, Night, Panorama via bundled ArcSoft native libs. |
+| [blackview-shark8-vulkan-hwui-patch](https://github.com/nalbe/blackview-shark8-vulkan-hwui-patch) | Shell | Magisk module forcing HWUI onto the Vulkan backend for the Shark 8 GSI. |
+| [blackview-shark8-logspam-cosmetics](https://github.com/nalbe/blackview-shark8-logspam-cosmetics) | Shell | KernelSU module silencing SELinux avc find/getattr logspam and ImsProvisioningController noise. |
+
 More repositories: https://github.com/nalbe?tab=repositories
 
 ## Local development

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>nalbe - Android work</title>
+</head>
+<body>
+    <div class="page">
+        <header class="hero hero--sub">
+            <div class="hero-inner">
+                <h1 class="hero-title">Android work</h1>
+                <p class="hero-tagline hero-tagline--alt">GSI · Magisk · KernelSU</p>
+                <p class="hero-sub">Modules and patches that make GSI ROMs behave on the Blackview Shark 8 (MediaTek MT6789, stock vendor). All Magisk / KernelSU based, tested on Android 13-14 builds.</p>
+                <div class="hero-links">
+                    <a class="pill pill--ghost" href="index.html">&#8592; Back to main page</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="projects">
+                <div class="grid">
+                    <a class="tile" href="https://github.com/nalbe/blackview-shark8-ims-patch" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">Shark 8 IMS Patch</span>
+                            <span class="tile-lang tile-lang--alt">Smali</span>
+                        </div>
+                        <p class="tile-desc">Framework smali patch that brings VoLTE + VoWiFi (IMS) back on the Shark 8 (MTK MT6789, phh GSI Android 14, MegaFon).</p>
+                    </a>
+
+                    <a class="tile" href="https://github.com/nalbe/blackview-shark8-led-daemon" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">Shark 8 LED Daemon</span>
+                            <span class="tile-lang tile-lang--alt">C</span>
+                        </div>
+                        <p class="tile-desc">Native root daemon and module glue that drive the notification / charge LED on the Shark 8, restoring stock behaviour on GSI.</p>
+                    </a>
+
+                    <a class="tile" href="https://github.com/nalbe/blackview-shark8-camera-patch" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">Shark 8 Camera Patch</span>
+                            <span class="tile-lang tile-lang--alt">Java</span>
+                        </div>
+                        <p class="tile-desc">Patched stock camera APK for the Shark 8 GSI - restores HDR, Night and Panorama by bundling the original ArcSoft native libs.</p>
+                    </a>
+
+                    <a class="tile" href="https://github.com/nalbe/blackview-shark8-vulkan-hwui-patch" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">Shark 8 Vulkan HWUI</span>
+                            <span class="tile-lang tile-lang--alt">Shell</span>
+                        </div>
+                        <p class="tile-desc">Magisk module forcing Android HWUI rendering onto the Vulkan backend (ro.hwui.use_vulkan=true) for the Shark 8 GSI.</p>
+                    </a>
+
+                    <a class="tile" href="https://github.com/nalbe/blackview-shark8-logspam-cosmetics" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">Shark 8 Logspam Cosmetics</span>
+                            <span class="tile-lang tile-lang--alt">Shell</span>
+                        </div>
+                        <p class="tile-desc">KernelSU module silencing SELinux avc find/getattr logspam and ImsProvisioningController noise from GSI/vendor mixing.</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>© 2026 nalbe.</p>
+                <p>Arduino is a registered trademark of Arduino LLC.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

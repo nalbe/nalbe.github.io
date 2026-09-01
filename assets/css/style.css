@@ -6,6 +6,8 @@
     --muted: #8b93a3;
     --accent: #61b3ff;
     --accent-soft: #1d2b3d;
+    --accent2: #7ee0a3;
+    --accent2-soft: #14281c;
     --radius: 12px;
 }
 
@@ -151,7 +153,56 @@ footer p { margin: 4px 0; }
 
 ::selection { background: var(--accent); color: #08101a; }
 
+/* ---------------- Secondary pill (outline) ---------------- */
+.pill--ghost {
+    background: transparent;
+    color: var(--accent) !important;
+    border: 1px solid var(--accent);
+    margin-left: 10px;
+}
+.pill--ghost:hover {
+    background: var(--accent-soft);
+    border-color: #74c0ff;
+    transform: translateY(-1px);
+}
+
+/* ---------------- Solid alt pill (green) ---------------- */
+.pill--alt {
+    background: var(--accent2);
+    color: #08100b !important;
+}
+.pill--alt:hover { background: #96eab6; }
+
+/* ---------------- Inner page hero (shorter) ---------------- */
+.hero--sub { padding: 72px 24px 60px; }
+.hero-tagline--alt { color: var(--accent2); }
+
+/* ---------------- Android / GSI teaser banner ---------------- */
+.teaser {
+    margin: 48px 0 8px;
+    padding: 28px 30px;
+    background: linear-gradient(135deg, #15241b 0%, var(--bg-soft) 65%);
+    border: 1px solid #24402f;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+.teaser h2 { margin: 0 0 6px; font-size: 1.25rem; }
+.teaser p { margin: 0; color: var(--muted); max-width: 540px; }
+.teaser .pill { flex-shrink: 0; }
+
+/* ---------------- Alt language pill (android page) ---------------- */
+.tile-lang--alt {
+    color: var(--accent2);
+    background: var(--accent2-soft);
+    border-color: #2b4a36;
+}
+
 @media (max-width: 640px) {
     .hero { padding: 64px 24px 56px; }
+    .hero--sub { padding: 56px 24px 48px; }
     .grid { grid-template-columns: 1fr; }
 }
