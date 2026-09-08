@@ -23,11 +23,11 @@ teaser banner.
 
 | Project | Language | What it is |
 |---------|----------|------------|
-| [blackview-shark8-ims-patch](https://github.com/nalbe/blackview-shark8-ims-patch) | Smali | VoLTE + VoWiFi (IMS) framework patch for the Shark 8 (MTK MT6789, phh GSI Android 14, MegaFon). |
-| [blackview-shark8-led-daemon](https://github.com/nalbe/blackview-shark8-led-daemon) | C | Root module driving the notification / charge LED on the Shark 8. |
-| [blackview-shark8-camera-patch](https://github.com/nalbe/blackview-shark8-camera-patch) | Java | Patched stock camera APK for GSI - restores HDR, Night, Panorama via bundled ArcSoft native libs. |
-| [blackview-shark8-vulkan-hwui-patch](https://github.com/nalbe/blackview-shark8-vulkan-hwui-patch) | Shell | Magisk module forcing HWUI onto the Vulkan backend for the Shark 8 GSI. |
-| [blackview-shark8-logspam-cosmetics](https://github.com/nalbe/blackview-shark8-logspam-cosmetics) | Shell | KernelSU module silencing SELinux avc find/getattr logspam and ImsProvisioningController noise. |
+| [shark8-volte-vowifi-gsi-patch](https://github.com/nalbe/shark8-volte-vowifi-gsi-patch) | Smali | VoLTE + VoWiFi (IMS) framework patch for the Shark 8 (MTK MT6789, phh GSI Android 14, MegaFon). |
+| [shark8-led-daemon](https://github.com/nalbe/shark8-led-daemon) | C | Root module driving the notification / charge LED on the Shark 8. |
+| [shark8-stock-camera-gsi-port](https://github.com/nalbe/shark8-stock-camera-gsi-port) | Java | Patched stock camera APK for GSI - restores HDR, Night, Panorama via bundled ArcSoft native libs. |
+| [shark8-vulkan-gsi-patch](https://github.com/nalbe/shark8-vulkan-gsi-patch) | Shell | Magisk module forcing HWUI onto the Vulkan backend for the Shark 8 GSI. |
+| [shark8-gsi-logspam-cosmetics](https://github.com/nalbe/shark8-gsi-logspam-cosmetics) | Shell | KernelSU module silencing SELinux avc find/getattr logspam and ImsProvisioningController noise. |
 
 More repositories: https://github.com/nalbe?tab=repositories
 
