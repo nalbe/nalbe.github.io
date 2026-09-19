@@ -62,7 +62,23 @@
                             <span class="tile-name">Shark 8 LED Daemon</span>
                             <span class="tile-lang tile-lang--alt">C</span>
                         </div>
-                        <p class="tile-desc">Native root daemon and module glue that drive the notification / charge LED on the Shark 8, restoring stock behaviour on GSI.</p>
+                        <p class="tile-desc">Native root daemon (chgd) + optional LED GUI driving the notification / charge LED on the Shark 8 GSI - notifications arrive over the standalone noty-bridge app, no polling loops.</p>
+                    </a>
+
+                    <a class="tile" href="https://github.com/nalbe/aw2033-driver" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">Shark 8 LED Driver (AW2033)</span>
+                            <span class="tile-lang tile-lang--alt">C</span>
+                        </div>
+                        <p class="tile-desc">Standalone AW2033 RGB LED chip controller: register map + on-chip pattern engine, and the awctl CLI for hand-tuning the LED on-device. The LED daemon links it as a static library.</p>
+                    </a>
+
+                    <a class="tile" href="https://github.com/nalbe/noty-bridge" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">LED Notification Bridge (noty-bridge)</span>
+                            <span class="tile-lang tile-lang--alt">Kotlin</span>
+                        </div>
+                        <p class="tile-desc">Headless NotificationListenerService that routes Android notification events (posts, calls, VoIP, screen, light toggle) to any consumer over abstract Unix sockets - config-driven rules and sinks, decoupled from the LED daemon.</p>
                     </a>
 
                     <a class="tile" href="https://github.com/nalbe/shark8-stock-camera-gsi-port" target="_blank" rel="noopener">
