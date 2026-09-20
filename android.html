@@ -51,7 +51,7 @@
                 <div class="grid">
                     <a class="tile" href="https://github.com/nalbe/shark8-volte-vowifi-gsi-patch" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">Shark 8 VoLTE VoWiFi GSI Patch</span>
+                            <span class="tile-name">shark8-volte-vowifi-gsi-patch</span>
                             <span class="tile-lang tile-lang--alt">Smali</span>
                         </div>
                         <p class="tile-desc">Framework smali patch that brings VoLTE + VoWiFi (IMS) back on the Shark 8 (MTK MT6789, phh GSI Android 14, MegaFon).</p>
@@ -59,7 +59,7 @@
 
                     <a class="tile" href="https://github.com/nalbe/shark8-led-daemon" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">Shark 8 LED Daemon</span>
+                            <span class="tile-name">shark8-led-daemon</span>
                             <span class="tile-lang tile-lang--alt">C</span>
                         </div>
                         <p class="tile-desc">Native root daemon (chgd) + optional LED GUI driving the notification / charge LED on the Shark 8 GSI - notifications arrive over the standalone noty-bridge app, no polling loops.</p>
@@ -67,7 +67,7 @@
 
                     <a class="tile" href="https://github.com/nalbe/android-aw2033-driver" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">Shark 8 LED Driver (AW2033)</span>
+                            <span class="tile-name">android-aw2033-driver</span>
                             <span class="tile-lang tile-lang--alt">C</span>
                         </div>
                         <p class="tile-desc">Standalone AW2033 RGB LED chip controller: register map + on-chip pattern engine, and the awctl CLI for hand-tuning the LED on-device. The LED daemon links it as a static library.</p>
@@ -75,7 +75,7 @@
 
                     <a class="tile" href="https://github.com/nalbe/android-notify-bridge" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">LED Notification Bridge (noty-bridge)</span>
+                            <span class="tile-name">android-notify-bridge</span>
                             <span class="tile-lang tile-lang--alt">Kotlin</span>
                         </div>
                         <p class="tile-desc">Headless NotificationListenerService that routes Android notification events (posts, calls, VoIP, screen, light toggle) to any consumer over abstract Unix sockets - config-driven rules and sinks, decoupled from the LED daemon.</p>
@@ -83,7 +83,7 @@
 
                     <a class="tile" href="https://github.com/nalbe/shark8-stock-camera-gsi-port" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">Shark 8 Stock Camera GSI Port</span>
+                            <span class="tile-name">shark8-stock-camera-gsi-port</span>
                             <span class="tile-lang tile-lang--alt">Java</span>
                         </div>
                         <p class="tile-desc">Patched stock camera APK for the Shark 8 GSI - restores HDR, Night and Panorama by bundling the original ArcSoft native libs.</p>
@@ -91,7 +91,7 @@
 
                     <a class="tile" href="https://github.com/nalbe/shark8-vulkan-gsi-patch" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">Shark 8 Vulkan GSI Patch</span>
+                            <span class="tile-name">shark8-vulkan-gsi-patch</span>
                             <span class="tile-lang tile-lang--alt">Shell</span>
                         </div>
                         <p class="tile-desc">Magisk module forcing Android HWUI rendering onto the Vulkan backend (ro.hwui.use_vulkan=true) for the Shark 8 GSI.</p>
@@ -99,7 +99,7 @@
 
                     <a class="tile" href="https://github.com/nalbe/shark8-gsi-logspam-cosmetics" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">Shark 8 GSI Logspam Cosmetics</span>
+                            <span class="tile-name">shark8-gsi-logspam-cosmetics</span>
                             <span class="tile-lang tile-lang--alt">Shell</span>
                         </div>
                         <p class="tile-desc">KernelSU module silencing SELinux avc find/getattr logspam and ImsProvisioningController noise from GSI/vendor mixing.</p>
@@ -107,7 +107,7 @@
 
                     <a class="tile" href="https://github.com/nalbe/shark8-adb-wifi-lan-persistent" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">Shark 8 ADB Wi-Fi LAN</span>
+                            <span class="tile-name">shark8-adb-wifi-lan-persistent</span>
                             <span class="tile-lang tile-lang--alt">Shell</span>
                         </div>
                         <p class="tile-desc">KernelSU module keeping ADB alive over Wi-Fi on port 5555, firewalled (iptables) to your LAN subnet only.</p>
@@ -115,7 +115,7 @@
 
                     <a class="tile" href="https://github.com/nalbe/shark8-custom-bootlogo" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">Shark 8 Custom Bootlogo</span>
+                            <span class="tile-name">shark8-custom-bootlogo</span>
                             <span class="tile-lang tile-lang--alt">PowerShell</span>
                         </div>
                         <p class="tile-desc">Custom boot logo (splash) for the Shark 8 - MTK lk logo partition image builder and flasher, flashable zip included.</p>
@@ -123,7 +123,7 @@
 
                     <a class="tile" href="https://github.com/nalbe/shark8-audiovol-earpiece-fix" target="_blank" rel="noopener">
                         <div class="tile-top">
-                            <span class="tile-name">Shark 8 Earpiece Volume Fix</span>
+                            <span class="tile-name">shark8-audiovol-earpiece-fix</span>
                             <span class="tile-lang tile-lang--alt">XML</span>
                         </div>
                         <p class="tile-desc">Fixes the weak call earpiece on the Shark 8: repairs a broken factory dl_gain curve in SpeechVol_AudioParam.xml (WB/RCV/GSM, param_id 11) and shows how to apply it on KernelSU.</p>
