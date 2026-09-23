@@ -128,6 +128,22 @@
                         </div>
                         <p class="tile-desc">Fixes the weak call earpiece on the Shark 8: repairs a broken factory dl_gain curve in SpeechVol_AudioParam.xml (WB/RCV/GSM, param_id 11) and shows how to apply it on KernelSU.</p>
                     </a>
+
+                    <a class="tile" href="https://github.com/nalbe/shark8-gamemode-gsi" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">shark8-gamemode-gsi</span>
+                            <span class="tile-lang tile-lang--alt">Shell</span>
+                        </div>
+                        <p class="tile-desc">KernelSU module + diagnostic kit that brings the stock MTK game mode back on the Shark 8 (Helio G99) AOSP/PHH GSI - re-supplies the framework trigger (IMtkPower::notifyAppState) so the vendor power engine applies its stock per-app profiles again. Pure trigger, no binary patches.</p>
+                    </a>
+
+                    <a class="tile" href="https://github.com/nalbe/shark8-smartrefresh-gsi" target="_blank" rel="noopener">
+                        <div class="tile-top">
+                            <span class="tile-name">shark8-smartrefresh-gsi</span>
+                            <span class="tile-lang tile-lang--alt">Shell</span>
+                        </div>
+                        <p class="tile-desc">KernelSU module + diagnostic kit that fixes visible screen tearing at 120Hz on the Shark 8 GSI - kills the SF content-detection churn that re-applies the display mode every ~200-400ms and replaces the broken MTK dynamic-FPS with a clean touch-driven 60/120 Hz governor.</p>
+                    </a>
                 </div>
             </section>
         </main>
